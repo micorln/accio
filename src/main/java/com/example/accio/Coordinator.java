@@ -29,12 +29,12 @@ import com.example.accio.utils.FileSplitUnit;
  */ 
 
 public class Coordinator {
-    
+
     private Path logDirectoryPath;
     private int numMapJobs = 5; // modify to come from configs
     private int numReduceJobs = 3; // modify to come from configs 
 
-    private int linesPerUnit = 128; // Has to rely on configs
+    private int linesPerUnit = 128; // Has to rely on configs or static
     private int taskBufferSize = 5;
 
     ExecutorService mapThreadPool = Executors.newFixedThreadPool(4);
